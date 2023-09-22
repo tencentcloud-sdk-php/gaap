@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCustomHeader请求参数结构体
  *
-
+ * @method string getRuleId() 获取规则ID
+ * @method void setRuleId(string $RuleId) 设置规则ID
  */
 class DescribeCustomHeaderRequest extends AbstractModel
 {
-
+    /**
+     * @var string 规则ID
+     */
+    public $RuleId;
 
     /**
-
+     * @param string $RuleId 规则ID
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeCustomHeaderRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
+        }
     }
 }
